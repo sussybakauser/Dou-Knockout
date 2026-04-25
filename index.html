@@ -1,11 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<!DOCTYPE html>
+<html lang="en"> <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dou Knockout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #1a1a1a;
+            color: white;
+            padding: 50px;
+        }
+
+        /* Estilo para las imágenes */
+        .banner-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* Lógica de idiomas: Ocultamos todas por defecto */
+        .lang-specific { display: none; }
+
+        /* Mostramos solo la que coincide con el idioma del HTML */
+        :lang(es) .es-content { display: block; }
+        :lang(ja) .ja-content { display: block; }
+        :lang(en) .en-content { display: block; }
+    </style>
 </head>
 <body>
-    <h1>Comming Soon!</h1>
-    <p>This is a placeholder so Dou Knockout page it's not even done yet!.</p>
+
+    <img src="Dou Knockout INT Github page banner.jpg" alt="Dou Knockout" class="banner-img">
+
+    <hr>
+
+    <div class="lang-specific es-content">
+        <img src="Dou Knockout SPAIN Github page banner.jpg" alt="Dou A toda hostia class="banner-img">
+        <h1>¡Próximamente!</h1>
+        <p>Esta es un placeholder asi que Dou A toda hostia. ¡Aún no está lista!</p>
+    </div>
+
+    <div class="lang-specific ja-content">
+        <img src="Dou Knockout JP Github page banner.jpg" alt="いらっしゃいませ" class="banner-img">
+        <h1>近日公開！</h1>
+        <p>これは Dou Knockout のプレースホルダーです。まだ完成していません！</p>
+    </div>
+
+    <div class="lang-specific en-content">
+        <h1>Coming Soon!</h1>
+        <p>This is a placeholder for Dou Knockout. It's not done yet!</p>
+    </div>
+
 </body>
 </html>
