@@ -1,12 +1,27 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
-<html lang="en"> <head>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dou Knockout</title>
     <style>
+        /* Cargamos la fuente principal desde la carpeta fonts */
+        @font-face {
+            font-family: 'Eigerdals Heavy';
+            src: url('fonts/Eigerdals-Heavy.ttf') format('truetype'); /* Ajusta la extensión si es .otf */
+            font-weight: bold;
+        }
+
+        /* Cargamos la fuente japonesa desde la carpeta fonts */
+        @font-face {
+            font-family: 'M Plus 1c Heavy';
+            src: url('fonts/mplus-1c-heavy.ttf') format('truetype'); /* Ajusta la extensión si es .otf */
+            font-weight: bold;
+        }
+
         body {
-            font-family: Arial, sans-serif;
+            /* Aquí combinamos ambas fuentes. Si falta un caracter en la primera, salta a la segunda */
+            font-family: 'Eigerdals Heavy', 'M Plus 1c Heavy', Arial, sans-serif;
             text-align: center;
             background-color: #1a1a1a;
             color: white;
@@ -22,12 +37,22 @@
         }
 
         /* Lógica de idiomas: Ocultamos todas por defecto */
-        .lang-specific { display: none; }
+        .lang-specific {
+            display: none;
+        }
 
         /* Mostramos solo la que coincide con el idioma del HTML */
-        :lang(es) .es-content { display: block; }
-        :lang(ja) .ja-content { display: block; }
-        :lang(en) .en-content { display: block; }
+        :lang(es) .es-content {
+            display: block;
+        }
+
+        :lang(ja) .ja-content {
+            display: block;
+        }
+
+        :lang(en) .en-content {
+            display: block;
+        }
     </style>
 </head>
 <body>
@@ -37,7 +62,8 @@
     <hr>
 
     <div class="lang-specific es-content">
-        <img src="Dou Knockout SPAIN Github page banner.jpg" alt="Dou A toda hostia class="banner-img">
+        <!-- Corregido el cierre de comillas en el alt -->
+        <img src="Dou Knockout SPAIN Github page banner.jpg" alt="Dou A toda hostia" class="banner-img">
         <h1>¡Próximamente!</h1>
         <p>Esta es un placeholder asi que Dou A toda hostia. ¡Aún no está lista!</p>
     </div>
